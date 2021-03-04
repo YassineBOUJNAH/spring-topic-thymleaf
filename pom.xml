@@ -11,8 +11,8 @@
 	<groupId>com.devnakka</groupId>
 	<artifactId>thymeleaf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootEmail</name>
-	<description>Demo project for Spring Boot Email</description>
+	<name>SpringBootapp</name>
+	<description>Demo project for Spring Boot app</description>
 
 	<properties>
 		<java.version>1.8</java.version>

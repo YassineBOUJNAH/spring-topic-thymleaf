@@ -1,4 +1,4 @@
-package com.devnakka.thymeleaf;
+package com.sqli.topic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -4,38 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add User</title>
+    <title>Update Topic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
 </head>
 
 <body>
 <div class="container my-5">
-    <h3> Add Student</h3>
+    <h3> Update Topic</h3>
     <div class="card">
         <div class="card-body">
-            <div class="col-md-10">
-                <form action="#" th:action="@{/students/add}" th:object="${student}" method="post">
+            <div class="col-md-8">
+                <form action="#" th:action="@{/topics/update/{id}(id=${topic.id})}" th:object="${topic}" method="post">
                     <div class="row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-6">
                             <label for="name" class="col-form-label">Name</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
                         </div>
-                        <div class="form-group col-md-8">
-                            <label for="email" class="col-form-label">Email</label> <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+
+                        <div class="form-group col-md-6">
+                            <label for="desciption" class="col-form-label">Description</label> <input type="text" th:field="*{desciption}" class="form-control" id="desciption" placeholder="Desciption"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{desciption}" class="text-danger"></span>
                         </div>
 
                         <div class="form-group col-md-8">
-                            <label for="phoneNo" class="col-form-label">Phone No</label> <input type="text" th:field="*{phoneNo}" class="form-control" id="phoneNo" placeholder="PhoneNo"> <span th:if="${#fields.hasErrors('phoneNo')}" th:errors="*{phoneNo}" class="text-danger"></span>
+                            <input type="submit" class="btn btn-primary" value="Update Topic">
                         </div>
-
-                        <div class="col-md-6">
-                            <input type="submit" class="btn btn-primary" value="Add Student">
-                        </div>
-
-                        <div class="form-group col-md-8"></div>
-
                     </div>
                 </form>
             </div>
